@@ -61,9 +61,11 @@ class LinearQueue:
 
         if self.front == -1 or self.front > self.rear:
             print('Queue Underflow...')
+            print('Repita')
             return None
 
         value = self.elements[self.front]
         self.elements[self.front] = None # (Optional)
         self.front += 1
         return value
+        
