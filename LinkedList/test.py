@@ -53,31 +53,33 @@ print(ll)
 
 print('Search A: ', ll.search('A'))
 
-# #Creamos la playlist
-# playlist = Playlist()
+#Creamos la playlist
+playlist = Playlist()
 
 
-# #Añadimos una cancion
-# playlist.insert_song('BD01', 'Agosto', 'Bad bunny', 'Un Verano Sin Ti')
-# playlist.insert_song('BD02', 'Otro Atardecer', 'Bad bunny', 'Un Verano Sin Ti')
-# playlist.insert_song('BD03', 'Moscow Mule', 'Bad bunny', 'Un Verano Sin Ti')
-# playlist.insert_song('RW01', 'Old Skull', 'Rauw Alejandro', 'Viceversa')
-# playlist.insert_song('RW02', 'Desenfocao', 'Rauw Alejandro', 'Viceversa')
-# playlist.insert_song('FD01', 'CHORRITO PA LAS ANIMAS', 'FEID', 'SIXDO')
-# playlist.insert_song('FD02', 'Belixe', 'FEID', 'Feliz Cumpleaños FERXXO')
+#Añadimos canciones a la playlist
+playlist.insert_song('BD01', 'Agosto', 'Bad bunny', 'Un Verano Sin Ti')
+playlist.insert_song('BD02', 'Otro Atardecer', 'Bad bunny', 'Un Verano Sin Ti')
+playlist.insert_song('BD03', 'Moscow Mule', 'Bad bunny', 'Un Verano Sin Ti')
+playlist.insert_song('RW01', 'Old Skull', 'Rauw Alejandro', 'Viceversa')
+playlist.insert_song('RW02', 'Desenfocao', 'Rauw Alejandro', 'Viceversa')
+playlist.insert_song('FD01', 'CHORRITO PA LAS ANIMAS', 'FEID', 'SIXDO')
+playlist.insert_song('FD02', 'Belixe', 'FEID', 'Feliz Cumpleaños FERXXO')
 
 
 
 
-# #Damos play
-# playlist.play()
-# playlist.show_details()
-# playlist.Next()
-# playlist.show_details()
-# playlist.previous()
-# playlist.show_details()
-# playlist.search_by_name('Agosto')
-# playlist.search_by_artist('Bad bunny')
-# playlist.playlistlen()
-# playlist.shuffle()
+#Damos play
+playlist.play()
+#Mostramos los detalles
+playlist.show_details()
+playlist.Next()
+playlist.show_details()
+playlist.previous()
+playlist.show_details()
+playlist.search_by_name('Agosto')
+playlist.search_by_artist('Bad bunny')
+#mostramos el tamaño de la playlist
+playlist.playlistlen()
+playlist.shuffle()
 
