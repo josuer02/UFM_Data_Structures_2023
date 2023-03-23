@@ -9,14 +9,14 @@ import time, sys
 
 @profile
 def tenMB(playlist):
-    for i in range(1450): #Aca deberia de ir 10400 pero peta el pickle
+    for i in range(2560): #Aca deberia de ir 10400 pero peta el pickle
         playlist.insert_song('BD01', 'Agosto', 'Bad bunny', 'Un Verano Sin Ti')
         playlist.insert_song('BD02', 'Otro Atardecer', 'Bad bunny', 'Un Verano Sin Ti')
         playlist.insert_song('BD03', 'Moscow Mule', 'Bad bunny', 'Un Verano Sin Ti')
         playlist.insert_song('RW01', 'Old Skull', 'Rauw Alejandro', 'Viceversa')
-        playlist.insert_song('RW02', 'Desenfocao', 'Rauw Alejandro', 'Viceversa')
-        playlist.insert_song('FD01', 'CHORRITO PA LAS ANIMAS', 'FEID', 'SIXDO')
-        playlist.insert_song('FD02', 'Belixe', 'FEID', 'Feliz Cumpleaños FERXXO')
+        # playlist.insert_song('RW02', 'Desenfocao', 'Rauw Alejandro', 'Viceversa')
+        # playlist.insert_song('FD01', 'CHORRITO PA LAS ANIMAS', 'FEID', 'SIXDO')
+        # playlist.insert_song('FD02', 'Belixe', 'FEID', 'Feliz Cumpleaños FERXXO')
 
     return playlist     
 
@@ -34,10 +34,7 @@ def traverse(playlist):
 @profile
 def traverse_pickle(playlist):
     file_path='./saved_ll'
-    print(sys.getrecursionlimit()) # Prints 1000
-    print(sys.setrecursionlimit(1000)) # Set the limit to 2000
-    sys.setrecursionlimit(100000)
-    print(sys.getrecursionlimit())
+    sys.setrecursionlimit(100000000)
     pickle_object(playlist, file_path)
     unpickle_playlist = unpickle_object(file_path)
     tiempo0 = time.time()
@@ -51,16 +48,12 @@ def traverse_pickle(playlist):
 
 
 
-
-
 @profile
 def main():
     playlist = Playlist()
     tenMB(playlist)
     traverse(playlist)
-    print(sys.getrecursionlimit()) # Prints 1000
-    print(sys.setrecursionlimit(1000)) # Set the limit to 2000
-    sys.setrecursionlimit(100000)
+    sys.setrecursionlimit(100000000)
     print(sys.getrecursionlimit())
     traverse_pickle(playlist)
     
