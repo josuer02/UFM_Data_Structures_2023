@@ -185,10 +185,10 @@ class BinarySearchTree:
             print('value not found...')
             return node
             
-        if value < node.value:
+        if value < node.data:
             node.left_child = self._delete(value, node.left_child)
             
-        elif value > node.value:
+        elif value > node.data:
             node.right_child = self._delete(value, node.right_child)
             
         else:
@@ -202,9 +202,9 @@ class BinarySearchTree:
                 node = None
                 return temp
                 
-            temp = self._find_min(node.right_child)
-            node.value = temp.value
-            node.right_child = self._delete(temp.value, node.right_child)
+            temp = self.find_min(node.right_child)
+            node.data = temp.data
+            node.right_child = self._delete(temp.data, node.right_child)
             
         return node
 
